@@ -22,9 +22,9 @@ public abstract class ColorfulActivity extends AppCompatActivity {
         setTheme(Colorful.getThemeDelegate().getStyleResBase());
         getTheme().applyStyle(Colorful.getThemeDelegate().getStyleResPrimary(), true);
         getTheme().applyStyle(Colorful.getThemeDelegate().getStyleResAccent(), true);
-        if (Colorful.getThemeDelegate().getPrimaryColor() == Colorful.ThemeColor.WHITE) {
-            Util.setLightStatusBarCompat(this, true);
-        }
+//        if (Colorful.getThemeDelegate().getPrimaryColor() == Colorful.ThemeColor.WHITE) {
+//            Util.setLightStatusBarCompat(this, true);
+//        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (Colorful.getThemeDelegate().isTranslucent()) {
                 getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -44,19 +44,21 @@ public abstract class ColorfulActivity extends AppCompatActivity {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        if (Colorful.getThemeDelegate().getPrimaryColor() == Colorful.ThemeColor.WHITE) {
-            Util.setToolbarTitleColorCompat(this, Color.BLACK, toolbar);
-        }
+//        if (Colorful.getThemeDelegate().getPrimaryColor() == Colorful.ThemeColor.WHITE) {
+//            Util.setToolbarTitleColorCompat(this, Color.BLACK, toolbar);
+//            // TODO: 2018/3/2 Detect if custom icon
+//            Util.setToolbarNavigationIconColorCompat(this, Color.BLACK, toolbar);
+//        }
     }
 
     @Override
     public void onPostCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onPostCreate(savedInstanceState, persistentState);
-        if (Colorful.getThemeDelegate().getPrimaryColor() == Colorful.ThemeColor.WHITE) {
-            Util.setToolbarTitleColorCompat(this, Color.BLACK, toolbar);
-            // TODO: 2018/3/2 Detect if custom icon
-            Util.setToolbarNavigationIconColorCompat(this, Color.BLACK, toolbar);
-        }
+//        if (Colorful.getThemeDelegate().getPrimaryColor() == Colorful.ThemeColor.WHITE) {
+//            Util.setToolbarTitleColorCompat(this, Color.BLACK, toolbar);
+//            // TODO: 2018/3/2 Detect if custom icon
+//            Util.setToolbarNavigationIconColorCompat(this, Color.BLACK, toolbar);
+//        }
     }
 
     @Override

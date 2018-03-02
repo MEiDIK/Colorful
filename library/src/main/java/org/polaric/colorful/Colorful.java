@@ -93,7 +93,7 @@ public class Colorful {
         BROWN(R.color.md_brown_500, R.color.md_brown_700),
         GREY(R.color.md_grey_500, R.color.md_grey_700),
         BLUE_GREY(R.color.md_blue_grey_500, R.color.md_blue_grey_700),
-        WHITE(R.color.md_white_1000, R.color.md_white_1000),
+//        WHITE(R.color.md_white_1000, R.color.md_white_1000),
         BLACK(R.color.md_black_1000, R.color.md_black_1000);
 
         @ColorRes private int colorRes;

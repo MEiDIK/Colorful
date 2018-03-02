@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Colorful</string>
+    <string name="action_theme">主题</string>
 </resources>
