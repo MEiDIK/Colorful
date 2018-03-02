@@ -20,8 +20,8 @@ public class Colorful {
     }
 
     public static void init(Context context) {
-        Log.d(Util.LOG_TAG,"Attatching to " + context.getPackageName());
-        themeString= PreferenceManager.getDefaultSharedPreferences(context).getString(Util.PREFERENCE_KEY, null);
+        Log.d(Constants.LOG_TAG,"Attatching to " + context.getPackageName());
+        themeString= PreferenceManager.getDefaultSharedPreferences(context).getString(Constants.PREFERENCE_KEY, null);
         if (themeString == null) {
             primaryColor = Defaults.primaryColor;
             accentColor = Defaults.accentColor;
@@ -47,7 +47,7 @@ public class Colorful {
     }
 
     private static void writeValues(Context context) {
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putString(Util.PREFERENCE_KEY, generateThemeString()).apply();
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putString(Constants.PREFERENCE_KEY, generateThemeString()).apply();
     }
 
     private static void initValues() {
@@ -64,7 +64,7 @@ public class Colorful {
 
     public static ThemeDelegate getThemeDelegate() {
         if (delegate==null) {
-            Log.e(Util.LOG_TAG, "getThemeDelegate() called before init(Context). Call Colorful.init(Context) in your application class");
+            Log.e(Constants.LOG_TAG, "getThemeDelegate() called before init(Context). Call Colorful.init(Context) in your application class");
         }
         return delegate;
     }

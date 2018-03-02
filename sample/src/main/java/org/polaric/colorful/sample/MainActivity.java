@@ -13,5 +13,6 @@ public class MainActivity extends ColorfulActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setSupportActionBar(((Toolbar) findViewById(R.id.toolbar)));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

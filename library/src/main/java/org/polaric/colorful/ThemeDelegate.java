@@ -22,7 +22,7 @@ public class ThemeDelegate {
         styleResPrimary = context.getResources().getIdentifier("primary" + primary.ordinal(), "style", context.getPackageName());
         styleResAccent = context.getResources().getIdentifier("accent" + accent.ordinal(), "style", context.getPackageName());
         styleResBase = dark ? R.style.Colorful_Dark : R.style.Colorful_Light;
-        Log.d(Util.LOG_TAG, "ThemeDelegate fetched theme in " + (System.currentTimeMillis()-curTime) + " milliseconds");
+        Log.d(Constants.LOG_TAG, "ThemeDelegate fetched theme in " + (System.currentTimeMillis()-curTime) + " milliseconds");
     }
 
     @StyleRes public int getStyleResPrimary() {
